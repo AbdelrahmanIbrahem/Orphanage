@@ -1,0 +1,62 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="LogInstyle.css" />
+    
+</head>
+<body>
+    <div id="container1">
+        <div id="header">
+            <h1 id="HeaderHead">KIDS REHAPITATION CENTER WEBSITE</h1>
+        </div>
+        <div id="right">
+            <div id="formHeader2"> <h2>Login</h2></div> <br><br><br>
+            
+            <form method="post" action="Control/Index.php" onsubmit="return validate_form ( );">
+                <label>UserID</label>
+                <input name="userid" id="USRID" type="number" inputmode="numeric" placeholder="ID"> <br><br><br><br>
+                <label>Password</label>
+                <input name="password" id="PWD" type="password" placeholder="Password"><br><br> <br><br><br>
+                <button name="login" id="login" value="login" onclick="checkinput ()">Login</button> <br><br><br><br><br><br>
+            </form>
+        </div>
+        <div id="left">
+            <div id="formHeader"> <h2>Register</h2></div>
+            <br><br>
+                <form method="post" action="Model/register.php" onsubmit="return validate_form ();">
+                    <label>UserID</label>
+                    <input type="number" name="registerUsername" id="registerUsername" inputmode="numeric" placeholder="ID" required><br><br>
+                    <label>Password</label>
+                    <input type="password" name="registerPassword" id="registerPassword" placeholder="Password" required> <br> <br>
+                    <label id="conf">Confirm Password</label>
+                    <input type="password" name="registerConfirmPassword" id="registerConfrimPassword" placeholder="Confirm Password" required> <br> <br>
+                    <label id="id">user type</label>
+                    
+                    <select name="usertype" id="usertype">
+                        <option value="1">Admin</option>
+                        <option value="2">Manager</option>
+                        <option value="3">Donator</option>
+                        <option value="4">Employee</option>
+                    </select>
+                    <br><br>
+
+                    <label id="id">E-Mail</label>
+                    <input type="email" name="registerEMail" id="registerEMail" placeholder="E-Mail" required>  <br> <br> <br><br>
+
+
+                    <button type="submit" id="regbutton" name="register" value="Register"> Register </button> <br><br><br> <br><br><br>
+                </form>
+        </div>
+    </div>
+
+    
+    <h1 id="love">Our kids will never walk alone</h1>
+
+    <script src="login.js"></script>
+</body>
+</html>
