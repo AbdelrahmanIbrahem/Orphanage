@@ -1,0 +1,62 @@
+<span>Donator ID</span> 
+<input type="id" placeholder="Enter Your ID" required />
+<span>Donator Username</span> 
+<input type="id" placeholder="Enter Your Username" required /><br> 
+<span>Donate Money</span>
+<select placeholder="Money" id="st"required />
+<option value="Cash" >Cash</option>
+<option value="Visa">Visa</option>
+<option value="Fawry">Fawry</option>
+</select> 
+<button onclick="SubmitType()" type="button" class="log" >Submit Type Of Payment</button> 
+<span>Donate Blankets</span> 
+<input type="number" placeholder="Enter Number Of Blankets" required />
+<button  type="button" class="log" >Submit Number Of Blankets</button> 
+<span>Donate Clothes</span>
+<select placeholder="Clothes Type" id="st"required />
+<option value="T-shirt" >T-shirt</option>
+<option value="Pants">Pants</option>
+<option value="Shoes">Shoes</option>
+</select> 
+<input type="number" placeholder="Enter Number Of Clothes" required />
+<button type="button" class="log" >Enter Number Of Clothes</button> 
+<script>
+    function SubmitType() {
+        var e = document.getElementById("st");
+        var value = e.options[e.selectedIndex].value;
+        var text = e.options[e.selectedIndex].text;
+        if(value=="Cash")
+            {
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "text");
+                x.setAttribute("value", "Enter Money Amount");
+                document.body.appendChild(x);
+            }
+            if(value=="Visa")
+            {
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "text");
+                x.setAttribute("value", "Enter Visa Number");
+                document.body.appendChild(x);
+                var y = document.createElement("INPUT");
+                y.setAttribute("type", "text");
+                y.setAttribute("value", "Expire Date");
+                document.body.appendChild(y);
+                var z = document.createElement("INPUT");
+                z.setAttribute("type", "text");
+                z.setAttribute("value", "CVV");
+                document.body.appendChild(z);
+            }
+            if(value=="Fawry")
+            {
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "number");
+                x.setAttribute("value", "Enter Your Phone Number");
+                document.body.appendChild(x);
+                var y = document.createElement("INPUT");
+                y.setAttribute("type", "text");
+                y.setAttribute("value", "Mail");
+                document.body.appendChild(y);
+            }
+    }
+</script>

@@ -1,0 +1,105 @@
+<span>Donator ID</span>
+<input type="number" placeholder="Donator ID" required /> <br>
+<span>Donator Name</span>
+<input type="text" placeholder="Donator Name" required /> <br>
+<span>Gender</span>
+<select placeholder="Gender" required />
+<option value="Male" >Male</option>
+<option value="Female">Female</option>
+</select> <br>
+<span>Place of birth</span> 
+<input type="text" placeholder="place of birth" required /><br>
+<span>Home address</span> 
+<input type="text" placeholder="Home address" required /><br>
+<span>Donator Job</span>
+<input type="text" placeholder="Donator Job" required /><br>
+<span>Phone Number</span>
+<input type="text" placeholder="Donator Number" required /><br>
+<span>Type of payment</span> 
+<select placeholder="payment" required >
+    <option value="cash">Cash</option>
+    <option value="visa">Visa</option>
+    <option value="fawry">Fawry</option>
+    </select> <br><br>
+    <button onclick="myFunction()" onclick="Create()" class="dropbtn">Create</button>
+    <button onclick="Read()" class="dropbtn">Read</button>
+    <button onclick="Update()" class="dropbtn">Update</button>
+    <button onclick="Delete()" class="dropbtn">Delete</button>
+<script>
+function Update() {
+          document.getElementById("myDropdown").classList.toggle("show");
+          
+        }
+        function Delete() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Delete";
+            document.body.appendChild(btn);
+        }
+        function Read() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Read";
+            document.body.appendChild(btn);
+        }
+        
+        function Update() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Update";
+            document.body.appendChild(btn);
+        }
+</script>
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+    </style>
