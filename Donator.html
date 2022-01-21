@@ -1,22 +1,25 @@
-<span>Donator ID</span>
-<input type="number" placeholder="Donator ID" required /> <br>
-<span>Donator Name</span>
-<input type="text" placeholder="Donator Name" required /> <br>
-<span>Gender</span>
-<select placeholder="Gender" required />
+<div id="title">
+  Donator Page
+  </div>
+<span id="label">Donator ID</span>
+<input id="donatorid" class="input" type="number" placeholder="Donator ID" required /> <br>
+<span id="label">Donator Name</span>
+<input id="donatorname" class="input" type="text" placeholder="Donator Name" required /> <br>
+<span id="label">Gender</span>
+<select id="gender" class="select" placeholder="Gender" required />
 <option value="Male" >Male</option>
 <option value="Female">Female</option>
 </select> <br>
-<span>Place of birth</span> 
-<input type="text" placeholder="place of birth" required /><br>
-<span>Home address</span> 
-<input type="text" placeholder="Home address" required /><br>
-<span>Donator Job</span>
-<input type="text" placeholder="Donator Job" required /><br>
-<span>Phone Number</span>
-<input type="text" placeholder="Donator Number" required /><br>
-<span>Type of payment</span> 
-<select placeholder="payment" required >
+<span id="label">Place of birth</span> 
+<input id="placeofbirth"class="input" type="text" placeholder="place of birth" required /><br>
+<span id="label">Home address</span> 
+<input id="homeaddress"class="input" type="text" placeholder="Home address" required /><br>
+<span id="label">Donator Job</span>
+<input id="donatorjob"class="input" type="text" placeholder="Donator Job" required /><br>
+<span id="label">Phone Number</span>
+<input id="donatornumber" class="input" type="text" placeholder="Donator Number" required /><br>
+<span id="label"s>Type of payment</span> 
+<select id="payment" class="select" placeholder="payment" required >
     <option value="cash">Cash</option>
     <option value="visa">Visa</option>
     <option value="fawry">Fawry</option>
@@ -24,7 +27,15 @@
     <button onclick="myFunction()" onclick="Create()" class="dropbtn">Create</button>
     <button onclick="Read()" class="dropbtn">Read</button>
     <button onclick="Update()" class="dropbtn">Update</button>
-    <button onclick="Delete()" class="dropbtn">Delete</button>
+    <button onclick="Delete()" class="dropbtn">Delete</button> <br> <br>
+    <select id="update" class="select" placeholder="Update Type" onchange="getSelectValue();" required />
+    <option >Update Donator ID</option>
+    <option >Update Donator Name</option>
+    <option >Update Gender</option>
+    <option >Update Place of birth</option>
+    <option >Update Home address</option>
+    <option >Update Donator Job</option>
+    </select>
 <script>
 function Update() {
           document.getElementById("myDropdown").classList.toggle("show");
@@ -64,17 +75,68 @@ function Update() {
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      body {
+                 background-image: url("donate.jpeg");
+                 background-repeat: no-repeat;
+                 background-size: cover;
+                 background-color: #cccccc;
+                 background-attachment: fixed;
+                 background-position: center;
+                 margin: auto;
+                 width: 25%;
+                 padding: 30px;
+               }
+      #label
+        {
+          
+          font-weight: bold;
+          color: darkslategray;
+        }
+        .input
+        {
+          width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: whitesmoke;
+  color: black;
+          
+        }
+        .select
+        {
+          width: 100%;
+          padding: 16px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: #f1f1f1;
+        }
+        #title
+        {
+          text-align: center;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 250%;
+          color:rgb(26, 23, 23);
+          font-weight: bold;
+        }
     .dropbtn {
-      background-color: #3498DB;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
+      background-color: gray;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         border-radius: 12px;
+         transition-duration: 0.4s;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     
     .dropbtn:hover, .dropbtn:focus {
-      background-color: #2980B9;
+      background-color: gray;
+         border-radius: 4px;
+         background-color: rgb(31, 29, 29); 
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
     }
     
     .dropdown {

@@ -1,29 +1,132 @@
-<h1>Security</h1><br><br>
+<html>
+  <div id="title">
+    Security Page
+    </div><br>
 <h2>Entry Permit</h2>
-<input type="text" placeholder="Enter Visitor Name" required ></input> <br>
-<input type="number" placeholder="Enter Visitor National ID" required ></input><br>
-<input type="number" placeholder="Enter Visitor Phone Number" required ></input><br>
+<input class="input" type="number" placeholder="Enter Visitor National ID" required ></input><br>
+<input class="input" type="number" placeholder="Enter Visitor Phone Number" required ></input><br>
 <label>Select Visit Reason</label>
-<select name="VisitReason" id="ut" required>
+<select class="select" name="VisitReason" id="ut" required>
     <option value="Donate" >Donate</option>
     <option value="Adopt">Adopt</option>
     <option value="Apply For A Job">Apply For A Job</option>
     <option value="Other">Other</option>
   </select> <br>
   <label>Enter Date And Time</label>
-<input type="datetime-local" required ></input><br>
+<input class="input" type="datetime-local" required ></input><br>
+<button  class="dropbtn">Submit</button> <br>
 <h2>Exit Permit</h2>
-<input type="text" placeholder="Enter Supervisor Name" required ></input> <br>
-<input type="number" placeholder="Enter Supervisor ID" required ></input><br>
-<input type="number" placeholder="Enter Supervisor Phone Number" required ></input><br>
-<input type="number" placeholder="Enter Orphan Name" required ></input><br>
-<input type="number" placeholder="Enter Orphan ID" required ></input><br>
+<input class="input" type="number" placeholder="Enter Supervisor ID" required ></input><br>
+<input class="input" type="number" placeholder="Enter Supervisor Phone Number" required ></input><br>
+<input class="input" type="number" placeholder="Enter Orphan ID" required ></input><br>
 <label>Select Visit Reason</label>
-<select name="VisitReason" id="ut" required>
+<select class="select" name="VisitReason" id="ut" required>
     <option value="School" >School</option>
     <option value="Training">Training</option>
     <option value="Trip">Trip</option>
     <option value="Other">Other</option>
   </select> <br>
   <label>Enter Date And Time</label>
-<input type="datetime-local" required ></input><br>
+<input class="input" type="datetime-local" required ></input><br>
+<button  class="dropbtn">Submit</button> <br>
+</html>
+<style>
+  h1{
+    font-weight: bold;
+  color: whitesmoke;
+  }
+  h2{
+    font-weight: bold;
+  color: whitesmoke;
+  }
+  body {
+         background-image: url("security.jpeg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-color: #cccccc;
+         background-attachment: fixed;
+         background-position: center;
+         margin: auto;
+         width: 25%;
+         padding: 30px;
+       }
+label
+{
+  font-weight: bold;
+  color: whitesmoke;
+}
+.select
+{
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+#title
+{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 250%;
+  color:whitesmoke;
+  font-weight: bold;
+}
+.input
+{
+  width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+background-color: whitesmoke;
+color: black;
+  
+}
+.dropbtn {
+ background-color: gray;
+ color: white;
+ padding: 16px;
+ font-size: 16px;
+ border: none;
+ cursor: pointer;
+ border-radius: 12px;
+ transition-duration: 0.4s;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.dropbtn:hover, .dropbtn:focus {
+ background-color: gray;
+ border-radius: 4px;
+ background-color: rgb(31, 29, 29); 
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+color: white;
+}
+
+.dropdown {
+ position: relative;
+ display: inline-block;
+ border-radius: 4px;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 160px;
+ overflow: auto;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+ border-radius: 4px;
+}
+
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>

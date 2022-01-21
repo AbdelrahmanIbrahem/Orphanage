@@ -1,0 +1,126 @@
+<html>
+   <div id="title">
+      HR Page
+      </div> <br>
+ <body>
+    
+    <span id="label">Applicant ID</span>
+    <input class="input" type="number" id="aid" placeholder="Applicant ID" required/><br> 
+    <span id="label">Applicant name</span>
+    <input class="input" type="text" id="anid" placeholder="Applicant name" required/><br>
+    <span id="label">Gender</span>
+    <select class="select" placeholder="Gender" required id="geid" /> 
+    <option value="Male" >Male</option>
+    <option value="Female">Female</option>
+    </select> <br>
+    <span id="label">Place of birth</span> 
+    <input class="input" type="text" id="pbid" placeholder="Place of birth" required /><br>
+    <span id="label">Home address</span> 
+    <input class="input" type="text" id="haid" placeholder="Home address" required /><br>
+    <span id="label">Phone Number</span>
+    <input class="input" type="text" id="pnid" placeholder="Phonenumber" required /><br>
+    <br> 
+    <button  type="button" id="aaid" class="dropbtn" >Add appointment</button> <br><br>
+    <span id="label">Applicant ID</span>
+    <input class="input" type="number" id="aaaid" placeholder="Applicant ID" required/><br> 
+    <button type="button" id="aacid" class="dropbtn" >Accept appointment</button> <br><br>
+    <span id="label">Applicant ID</span>
+    <input class="input" type="number" id="adid" placeholder="Applicant ID" required/><br> 
+    <button type="button" id="daid" class="dropbtn" >Delete appointment</button> <br><br>
+    <span id="label">Applicant ID</span>
+    <input class="input" type="number" id="asid" placeholder="Applicant ID" required/><br> 
+    <button type="button" id="said" class="dropbtn" >Search appointment</button>
+ </body>
+</html>
+<style>
+   body {
+          background-image: url("hr.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: #cccccc;
+          background-attachment: fixed;
+          background-position: center;
+          margin: auto;
+          width: 25%;
+          padding: 30px;
+        }
+ #label
+ {
+   font-weight: bold;
+   color: darkslategray;
+ }
+ .select
+ {
+   width: 100%;
+   padding: 16px 20px;
+   border: none;
+   border-radius: 4px;
+   background-color: #f1f1f1;
+ }
+ #title
+ {
+   text-align: center;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 250%;
+   color:rgb(26, 23, 23);
+   font-weight: bold;
+ }
+ .input
+ {
+   width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+background-color: whitesmoke;
+color: black;
+   
+ }
+.dropbtn {
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: gray;
+  border-radius: 4px;
+  background-color: rgb(31, 29, 29); 
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>

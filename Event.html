@@ -1,0 +1,90 @@
+<html>
+    <div id="title">
+        Event Page
+        </div>
+<span id="label">Event Name</span>
+<input id="orphanname"class="input" type="text" placeholder="Event Name" required /> <br>
+<span id="label">Event Category</span>
+<select id="gender" class="select" placeholder="Category" required >
+<option value="funday" >Funday</option>
+<option value="dishparty">Dish Party</option>
+<option value="birthday">Orphan Birthday</option>
+</select> <br>
+<span id="label">Event Date</span> 
+<input id="DOB"class="input" type="date" placeholder="Date" required /> <br>
+<span id="label">Event Avenue</span> 
+<input id="avenue"class="input" type="text" placeholder="Avenue" required /> <br>
+<span id="label">Number of Invitations</span> 
+<input id="numberofbrothers" class="input" type="number" placeholder="Number of Invitations" required /><br>
+<span id="label">Organiser ID</span> 
+<input id="organiserid" class="input" type="number" placeholder="Organiser id" required /><br>
+<button type="button" id="create" class="dropbtn" >Create Event</button> <br><br> <br>
+<span id="label">Person ID</span> 
+<input id="organiserid" class="input" type="text" placeholder="Person ID" required /><br>
+<button type="button" id="create" class="dropbtn" >Invite Person</button>
+<button type="button" id="create" class="dropbtn" >Delete Invitation</button>
+</html>
+
+<style>
+    body {
+           background-image: url("event.jpeg");
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-color: #cccccc;
+           background-attachment: fixed;
+           background-position: center;
+           margin: auto;
+           width: 25%;
+           padding: 30px;
+         }
+         #title
+           {
+             text-align: center;
+             font-family: "Times New Roman", Times, serif;
+             font-size: 250%;
+             color:white;
+             font-weight: bold;
+           }
+         .select
+           {
+             width: 100%;
+             padding: 16px 20px;
+             border: none;
+             border-radius: 4px;
+             background-color: #f1f1f1;
+           }
+         #label
+           {
+               font-weight: bold;
+             color: whitesmoke;
+           }
+           .input
+           {
+             width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: none;
+     background-color: whitesmoke;
+     color: black;
+           }
+           .dropbtn {
+            background-color: gray;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          }
+          
+          .dropbtn:hover, .dropbtn:focus {
+            background-color: gray;
+            border-radius: 4px;
+            background-color: rgb(31, 29, 29); 
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+     color: white;
+          }
+   </style>

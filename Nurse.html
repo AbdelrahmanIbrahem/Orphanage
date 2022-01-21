@@ -1,53 +1,138 @@
 <html>
+    <div id="title">
+        Nurse Page
+        </div><br>
  <body>
-    <span>Orphan ID</span>
-    <input type="number" placeholder="Orphan ID" required/><br> 
-    <span>Orphan name</span>
-    <input type="text" placeholder="Orphan name" required/><br>
-    <span>His/Her diagnose</span>
-    <input type="text" placeholder="Diagnose" required/><br>
-    <span>suitable medicine</span>
-    <input type="text" placeholder="medicine" required/><br>
-    <button type="button" class="medicine" >give medicine</button> <br><br><br>
+    <span id="label">Orphan ID</span>
+    <input class="input" type="number" id="oid" placeholder="Orphan ID" required/><br> 
+    <span id="label">His/Her diagnose</span>
+    <input class="input" type="text" id="did" placeholder="Diagnose" required/><br>
+    <span id="label">Suitable medicine</span>
+    <input class="input" type="text" id="mid" placeholder="Medicine" required/><br>
+    <button class="dropbtn" type="button" id="gid" class="medicine" >Give medicine</button> <br><br><br>
     <label class="Breakfast"> 
-        <span>Your Breakfast:</span>
-        <input type="text" placeholder="food should be eaten" required/> 
+        <span id="label">Your Breakfast:</span>
+        <textarea class="input" type="text" id="bid"  required/> </textarea>
          <br>     
     </label>
     <br><br>
     <label class="Lunch">
-        <span>Your Lunch:</span>
-        <input type="text" placeholder="food should be eaten" required/>
+        <span id="label">Your Lunch:</span>
+        <textarea  class="input" type="text" id="lid" required/></textarea>
          <br>
     </label>
     <br><br>
     <label class="Dinner">
-        <span>Your Dinner:</span>
-        <input type="text" placeholder="food should be eaten" required/> 
+        <span id="label">Your Dinner:</span>
+        <textarea class="input" type="text" id="diid" required/> </textarea>
          <br>
     </label>
     <br><br>
     <label class="Snacks approved">
-        <span>Your snacks:</span>
-        <input type="text" placeholder="snacks you can eat" required/> 
+        <span id="label">Your snacks:</span>
+        <textarea class="input" type="text" id="sid" required/> </textarea>
          <br>
     </label>
     <br><br>
     <label class="food not approved">
-        <span>food shouldn't be eaten</span>
-        <input type="text"/> 
+        <span id="label">Food should not be eaten</span>
+        <textarea class="input"type="text" id="feid"/> </textarea>
          <br>
     </label>
     <br><br>
-    <button type="button" class="Submit" >Submit</button> 
-
-
-
-
-
-
-
-
+    <button class="dropbtn" type="button" id="suid" class="Submit" >Submit</button> 
 
  </body>
 </html>
+<style>
+    body {
+           background-image: url("nurse.jpeg");
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-color: #cccccc;
+           background-attachment: fixed;
+           background-position: center;
+           margin: auto;
+           width: 25%;
+           padding: 30px;
+         }
+  #label
+  {
+    font-weight: bold;
+    color: darkslategray;
+  }
+  .select
+  {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+  #title
+  {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 250%;
+    color:whitesmoke;
+    font-weight: bold;
+  }
+  .input
+  {
+    width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ box-sizing: border-box;
+ border: none;
+ background-color: whitesmoke;
+ color: black;
+    
+  }
+ .dropbtn {
+   background-color: gray;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 12px;
+   transition-duration: 0.4s;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ }
+ 
+ .dropbtn:hover, .dropbtn:focus {
+   background-color: gray;
+   border-radius: 4px;
+   background-color: rgb(31, 29, 29); 
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ color: white;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+   border-radius: 4px;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   overflow: auto;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   border-radius: 4px;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown a:hover {background-color: #ddd;}
+ 
+ .show {display: block;}
+ </style>

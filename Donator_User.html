@@ -1,0 +1,171 @@
+<html>
+    <div id="title">
+        Donator User Page
+        </div> <br><br>
+        <div class="container">
+            <a href="Donate.html">
+                <button type="button" id="create" class="dropbtn" >Donate Money</button> <br><br>
+                </a>
+<button onclick="Clothes()" type="button" id="read" class="dropbtn" >Donate Clothes</button><br><br>
+<button onclick="Blankets()" type="button" id="update" class="dropbtn" >Donate Blankets</button><br><br>
+</div>
+</html>
+
+<script>
+
+document.getElementById('elementID').hide();
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+  
+    function Clothes() {
+        const input = document.createElement("input");
+        input.style.width = '100px'; 
+        input.style.height = '30px'; 
+        input.style.background = 'gray';
+        input.style.color = 'white'; 
+        input.style.fontSize = '20px'; 
+        input.setAttribute("type", "number");
+        document.body.appendChild(input);
+
+        var myParent = document.body;
+
+        //Create array of options to be added'
+        var array = ["T-Shirt","Pants","Shoes"];
+
+        //Create and append select list
+        var selectList = document.createElement("select");
+        selectList.id = "mySelect";
+        myParent.appendChild(selectList);
+
+        //Create and append the options
+        for (var i = 0; i < array.length; i++) {
+            var option = document.createElement("option");
+            option.value = array[i];
+            option.text = array[i];
+            selectList.appendChild(option);
+        }
+        selectList.style.width = '100px'; 
+        selectList.style.height = '40px'; 
+        selectList.style.background = 'blue';
+        selectList.style.color = 'white'; 
+        selectList.style.fontSize = '10px'; 
+        let btn = document.createElement("button");
+        btn.innerHTML = "Submit Quantity";
+        document.body.appendChild(btn);
+        btn.style.width = '100px'; 
+        btn.style.height = '40px'; 
+        btn.style.background = 'red';
+        btn.style.color = 'white'; 
+        btn.style.fontSize = '10px'; 
+
+       
+    }
+    
+    function Blankets() {
+        const input = document.createElement("input");
+        input.style.width = '100px'; 
+        input.style.height = '30px'; 
+        input.style.background = 'gray';
+        input.style.color = 'white'; 
+        input.style.fontSize = '20px'; 
+        input.setAttribute("type", "number");
+        document.body.appendChild(input);
+        let btn = document.createElement("button");
+        btn.innerHTML = "Submit Quantity";
+        document.body.appendChild(btn);
+        btn.style.width = '100px'; 
+        btn.style.height = '40px'; 
+        btn.style.background = 'red';
+        btn.style.color = 'white'; 
+        btn.style.fontSize = '10px'; 
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+      function myFunction() {
+    var x = document.getElementById("elementID");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+    }
+    </script>
+
+<style>
+ body {
+        background-image: url("orphan.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #cccccc;
+        background-attachment: fixed;
+        background-position: center;
+        margin: auto;
+        width: 35%;
+        padding: 30px;
+      }
+      #title
+        {
+          text-align: center;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 250%;
+          color:rgb(26, 23, 23);
+          font-weight: bold;
+        }
+      .select
+        {
+          width: 100%;
+          padding: 16px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: #f1f1f1;
+        }
+      #label
+        {
+            font-weight: bold;
+          color: whitesmoke;
+        }
+        .input
+        {
+          width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: whitesmoke;
+  color: black;
+        }
+        .container{
+            margin: 5%;
+            padding-left: 30%;
+        }
+        .dropbtn {
+         background-color: gray;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         border-radius: 12px;
+         transition-duration: 0.4s;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+       }
+       
+       .dropbtn:hover, .dropbtn:focus {
+         background-color: gray;
+         border-radius: 4px;
+         background-color: rgb(31, 29, 29); 
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+       }
+</style>

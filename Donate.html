@@ -1,39 +1,35 @@
 <html>
     <div id="title">
-        Orphan Page
+        Donate Page
         </div>
-<span id="label">Orphan ID</span>
-<input id="orphanid"class="input" type="number" placeholder="Orphan ID" required /> <br>
-<span id="label">Orphan Name</span>
-<input id="orphanname"class="input" type="text" placeholder="Orphan Name" required /> <br>
-<span id="label">Gender</span>
-<select id="gender" class="select" placeholder="Gender" required >
-<option value="Male" >Male</option>
-<option value="Female">Female</option>
-</select> <br>
-<span id="label">DOB</span> 
-<input id="DOB"class="input" type="date" placeholder="DOB" required /> <br>
-<span id="label">Place of birth</span> 
-<input id="placeofbirth"class="input" type="text" placeholder="place of birth" required /> <br>
-<span id="label">Number of brothers</span> 
-<input id="numberofbrothers" class="input" type="number" placeholder="Number of brothers" required /><br>
-<span id="label">Date of registration</span> 
-<input id="dateofregistration" class="input" type="date" placeholder="Date of registration" required /><br>
-<span id="label">Orphan Image</span> 
-<input id="imgfile" class="input" type="file" placeholder="Orphan Image" required /><br> <br>
-<button onclick="myFunction()" type="button" id="create" class="dropbtn" >Create Orphan</button>
-<button onclick="Read()" type="button" id="read" class="dropbtn" >Read Orphan</button>
-<button onclick="Update()" type="button" id="update" class="dropbtn" >Update Orphan</button>
-<button onclick="Delete()" type="button" id="delete" class="dropbtn" >Delete Orphan</button> <br><br>
-<select id="update"class="select" placeholder="Update Type" onchange="getSelectValue();" required />
-    <option >Update Orphan ID</option>
-    <option >Update Orphan Name</option>
-    <option >Update Gender</option>
-    <option >Update Place of birth</option>
-    <option >Update DOB</option>
-    <option >Update Number Of Brothers</option>
-    <option >Update Date Of Registration</option>
-    </select> <br>
+        <div id="visa">
+           <span id="title2">Visa</span> <br><br>
+<div id="label">Card Holder Name</div>
+<input id="cardholder"class="input" type="text" placeholder="Card Holder Name" required /> <br>
+<div id="label">Card Number</div>
+<input id="carnumber"class="input" type="text" placeholder="Card Number" required /> <br>
+<div id="label">Security Code</div>
+<input id="code" class="select" placeholder="Security Code" required ><br>
+<div id="label">Expiration Date</div> 
+<input id="date"class="input" type="date" placeholder="Expiration Date" required /> <br>
+<button type="submit" id="visasubmit" class="dropbtn" >Submit</button>
+</div>
+<div id="fawry">
+    <span id="title3">Fawry</span><br><br>
+    <span id="label">Mobile Number</span>
+    <input id="mobile"class="input" type="number" placeholder="Mobile Number" required /> <br>
+    <span id="label">Price</span>
+    <input id="price"class="input" type="number" placeholder="Price" required /> <br>
+    <button type="submit" id="fawrysubmit" class="dropbtn" >Submit</button>
+    </div>
+    <div id="cash">
+        <span id="title4">Cash</span><br><br>
+        <span id="label">Mobile Number</span>
+        <input id="mobile"class="input" type="number" placeholder="Mobile Number" required /> <br>
+        <span id="label">Address</span>
+        <input id="address"class="input" type="text" placeholder="Address" required /> <br>
+        <button type="submit" id="cashsubmit" class="dropbtn" >Submit</button>
+        </div>
 </html>
 
 <script>
@@ -133,6 +129,49 @@ document.getElementById('elementID').hide();
           font-size: 250%;
           color:rgb(26, 23, 23);
           font-weight: bold;
+        }
+        #title2
+        {
+          text-align: left;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 350%;
+          color:rgb(34, 187, 34);
+          font-weight: bold;
+        }
+        #title3
+        {
+          text-align: left;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 320%;
+          color:rgb(24, 24, 184);
+          font-weight: bold;
+        }
+        #title4
+        {
+          text-align: left;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 320%;
+          color:rgb(184, 30, 30);
+          font-weight: bold;
+        }
+        #visa
+        {
+            float: right;
+            padding-right: 130%;
+            width: 100%;
+        }
+        #fawry
+        {
+            position:absolute;
+            width: 20%;
+            height: 190%;
+        }
+        #cash
+        {
+            position:absolute;
+            margin-left: 29%;
+            width: 20%;
+            height: 190%;
         }
       .select
         {

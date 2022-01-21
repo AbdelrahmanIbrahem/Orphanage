@@ -1,0 +1,223 @@
+<link rel="stylesheet" href="Adopter.css">
+<div id="title">
+Adopter Page
+</div>
+<div class="form" id="form" >
+    <span id="label">Adopter ID</span>
+    <input id="adopterid" class="input" type="number" placeholder="Adopter ID" required /> <br>
+    <span id="label">Adopter Name</span>
+    <input id="adoptername" class="input" type="text" placeholder="Adopter Name" required /> <br>
+    <span class="label">Wife Name</span>
+    <input id="wifename" class="input" type="text" placeholder="Wife Name" required /> <br>
+    <span id="label">Gender</span>
+    <select id="gender" class="select" placeholder="Gender" required />
+    <option value="Male" >Male</option>
+    <option value="Female">Female</option>
+    </select> <br>
+    <span  id="label">Place of birth</span> 
+    <input id="placeofbirth" class="input" type="text" placeholder="place of birth" required /><br>
+    <span id="label">Home address</span> 
+    <input id="homeaddress" class="input" type="text" placeholder="Home address" required /><br>
+    <span id="label">Adopter Job</span>
+    <input id="adopterjob" class="input" type="text" placeholder="Adopter Job" required /><br>
+    <span id="label">Phone Number</span>
+    <input id="phonenumber" class="input" type="text" placeholder="Phone Number" required /><br>
+    <span id="label">Family members number</span>
+    <input id="familynumber" class="input" type="number" placeholder="Family members number" required /> <br> 
+    
+
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+    <body>
+    <br>
+      <button onclick="myFunction()" onclick="Create()" class="dropbtn">Create</button> 
+      <button onclick="Read()" class="dropbtn">Read</button>
+      <button onclick="Update()" class="dropbtn">Update</button>
+      <button onclick="Delete()" class="dropbtn">Delete</button> <br> <br><br>
+      <select id="update" class="select" placeholder="Update Type" onchange="getSelectValue();" required />
+    <option >Update User ID</option>
+    <option >Update Name</option>
+    <option >Update Wife Namee </option>
+    <option >Update Gender</option>
+    <option >Update Place of birth</option>
+    <option >Update Home address</option>
+    <option >Update Adopter Job</option>
+    <option >Update Phone Number</option>
+    <option >Update Family members number</option>
+    </select> <br>
+    </body>
+  </div>
+  </html>
+    <script>
+        function getSelectValue()
+            {
+                var selectedValue = document.getElementById("list").value;
+                alert(selectedValue);
+            }
+            getSelectValue();
+    
+        window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    document.getElementById('elementID').hide();
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function Update() {
+          document.getElementById("myDropdown").classList.toggle("show");
+          
+        }
+        function Delete() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Delete";
+            document.body.appendChild(btn);
+        }
+        function Read() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Read";
+            document.body.appendChild(btn);
+        }
+        
+        function Update() {
+            var txtName = document.getElementById("txtName");
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            document.body.appendChild(input);
+            let btn = document.createElement("button");
+            btn.innerHTML = "Submit ID Then Update";
+            document.body.appendChild(btn);
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+          function myFunction() {
+        var x = document.getElementById("elementID");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+        }
+        </script>
+
+
+        <style>
+          body {
+                 background-image: url("adoption.jpeg");
+                 background-repeat: no-repeat;
+                 background-size: cover;
+                 background-color: #cccccc;
+                 background-attachment: fixed;
+                 background-position: center;
+                 margin: auto;
+                 width: 25%;
+                 padding: 30px;
+               }
+        #label
+        {
+          font-weight: bold;
+          color: darkslategray;
+        }
+        .select
+        {
+          width: 100%;
+          padding: 16px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: #f1f1f1;
+        }
+        #title
+        {
+          text-align: center;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 250%;
+          color:rgb(26, 23, 23);
+          font-weight: bold;
+        }
+        .input
+        {
+          width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: whitesmoke;
+  color: black;
+          
+        }
+       .dropbtn {
+         background-color: gray;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         border-radius: 12px;
+         transition-duration: 0.4s;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+       }
+       
+       .dropbtn:hover, .dropbtn:focus {
+         background-color: gray;
+         border-radius: 4px;
+         background-color: rgb(31, 29, 29); 
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+       }
+       
+       .dropdown {
+         position: relative;
+         display: inline-block;
+         border-radius: 4px;
+       }
+       
+       .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f1f1f1;
+         min-width: 160px;
+         overflow: auto;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         z-index: 1;
+         border-radius: 4px;
+       }
+       
+       .dropdown-content a {
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+       }
+       
+       .dropdown a:hover {background-color: #ddd;}
+       
+       .show {display: block;}
+       </style>
