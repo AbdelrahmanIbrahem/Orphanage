@@ -2,6 +2,7 @@
 
 include_once("../Model/Singletonedataconfig.php");
 
+
  if ($_POST)
 {
     if (isset($_POST['login']) && $_POST['login'] == "login")
@@ -16,17 +17,14 @@ include_once("../Model/Singletonedataconfig.php");
         $res;
         $res = $conn->query($sql);
         
-        $row = mysqli_fetch_array($res);
-        $usertype=$row['usertype'];
+        $roow = mysqli_fetch_array($res);
+        $usertype=$roow['usertype'];
              
       
         if ($res->num_rows > 0) {
             
-             if (password_verify($password, $row ['password'])) 
+             if (password_verify($password, $roow ['password'])) 
              {
-                //echo'<script>alert("WELCOME")</script>';  
-                //echo ($globuser);
-                //echo("hello");
                 $sq= "select LINKID from user_links where UID='" .  $usertype . "'";  
                 $links=$conn->query($sq);
                 
@@ -54,8 +52,20 @@ include_once("../Model/Singletonedataconfig.php");
                    
         }
         else {
-            echo'<script>alert("error: user not found")</script>';
-            echo '<script>location.href="../starter.php";</script>';
+            
+            $sql = "SELECT ErrorTemplate FROM errors WHERE ID =5";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) 
+           {
+                // output data of each row
+                while($row = $result->fetch_assoc()) 
+                {
+                    $error=$row["ErrorTemplate"];
+                    echo "<script>alert('$error');</script>";
+                }
+                echo '<script>location.href="../starter.php";</script>';
+           }
         }
         mysqli_close($conn);
     }
