@@ -1,0 +1,82 @@
+<html>
+    <div id="title">
+        Football Subscription
+        </div>
+        <br><br>
+        <form method="post" action=" " onsubmit="return validate_form();">
+            <span id="label">Orphan ID</span> 
+            <input class="input" id="orphanid"class="input" type="number" placeholder="Orphan ID" required /> <br>
+            <input type="radio" id="subscribe" name="sub" value="subscribtion">
+            <label id="label">Subscribe In Football</label><br><br>
+            <input  type="radio" id="unsubscribe" name="sub" value="unsubscribtion"> 
+            <label id="label">Unsubscribe From Football</label><br><br>
+            <button  type="submit" id="submit" class="dropbtn" >Submit</button>
+        </form>
+</html>
+
+
+
+<style>
+ body {
+        background-image: url("orphan.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #cccccc;
+        background-attachment: fixed;
+        background-position: center;
+        margin: auto;
+        width: 25%;
+        padding: 30px;
+      }
+      #title
+        {
+          text-align: center;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 250%;
+          color:rgb(26, 23, 23);
+          font-weight: bold;
+        }
+      .select
+        {
+          width: 100%;
+          padding: 16px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: #f1f1f1;
+        }
+      #label
+        {
+            font-weight: bold;
+          color: black;
+          font-size: 140%;
+        }
+        .input
+        {
+          width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: whitesmoke;
+  color: black;
+        }
+        .dropbtn {
+         background-color: gray;
+         color: white;
+         padding: 16px;
+         font-size: 16px;
+         border: none;
+         cursor: pointer;
+         border-radius: 12px;
+         transition-duration: 0.4s;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+       }
+       
+       .dropbtn:hover, .dropbtn:focus {
+         background-color: gray;
+         border-radius: 4px;
+         background-color: rgb(31, 29, 29); 
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+       }
+</style>
