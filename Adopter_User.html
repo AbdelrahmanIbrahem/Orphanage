@@ -3,11 +3,12 @@
         Adopter User Page
         </div> <br><br>
         <span id="label">Age Range</span> <br><br>
-        <select id="agerange" class="select" placeholder="Age Range" required >
-            <option value="1-5" >1-5</option>
-            <option value="5-10">5-10</option>
-            <option value="10-18">10-18</option>
-            </select> <br><br><br>
+        <input  type="radio" id="less5" name="less" value="5"> 
+            <label id="label"> Less Than 5 Years</label><br><br>
+            <input  type="radio" id="less10" name="less" value="10">
+            <label id="label">Less Than 10 Years</label><br><br>
+            <input  type="radio" id="less18" name="less" value="18">
+            <label id="label">Less Than 18 Years</label><br><br>
 <span id="label">Gender</span> <br><br>
 <select id="gender" class="select" placeholder="Gender" required >
 <option value="Male" >Male</option>
@@ -50,7 +51,7 @@
         {
             font-size: 150%;
             font-weight: bold;
-          color: whitesmoke;
+          color: black;
         }
         .input
         {
